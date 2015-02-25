@@ -36,6 +36,11 @@ class BlanketsController < ApplicationController
     end
   end
 
+  def destroy
+    Blanket.destroy(params[:id])
+    flash[:notice] = "Blanket was successfully deleted"
+    redirect_to blankets_path
+  end
 
   private
 
