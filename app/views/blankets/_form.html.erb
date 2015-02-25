@@ -1,3 +1,10 @@
+<% if @blanket.errors.any? %>
+  <ul>
+    <% @blanket.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_for @blanket do |f| %>
 
