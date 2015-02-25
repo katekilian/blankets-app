@@ -13,8 +13,8 @@ class BlanketsController < ApplicationController
   end
 
   def create
-    @blanket = Blanket.new
-    if @blanket.save(blanket_params)
+    @blanket = Blanket.new(blanket_params)
+    if @blanket.save
       flash[:notice] = "Blanket was successfully created"
       redirect_to blankets_path
     else

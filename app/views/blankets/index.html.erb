@@ -6,7 +6,7 @@
 <br>
 
 <% @blankets.each do |blanket| %>
-  <%= blanket.name %>
+  Blanket name: <%= blanket.name %>
   <br>
   <%= link_to "View Blanket", blanket_path(blanket) %>
   <hr>
