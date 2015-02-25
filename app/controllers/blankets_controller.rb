@@ -22,6 +22,20 @@ class BlanketsController < ApplicationController
     end
   end
 
+  def edit
+    @blanket = Blanket.find(params[:id])
+  end
+
+  def update
+    @blanket = Blanket.find(params[:id])
+    if @blanket.update(blanket_params)
+      flash[:notice] = "Blanket was successfully updated"
+      redirect_to blankets_path
+    else
+      render :edit
+    end
+  end
+
 
   private
 
