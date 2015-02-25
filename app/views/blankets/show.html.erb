@@ -8,4 +8,4 @@ Weight: <%= @blanket.weight %>
 <br>
 <%= link_to "Edit Blanket", edit_blanket_path %>
 <br>
-<%= link_to "Delete Blanket", blanket_path(@blanket), method: "delete" %>
+<%= link_to "Delete Blanket", blanket_path(@blanket), method: "delete", data: { confirm: "Are you sure?"} %>
