@@ -1,0 +1,13 @@
+<h1>Blankets!!</h1>
+
+<%= link_to "New Blanket", new_blanket_path %>
+<hr>
+<br>
+<br>
+
+<% @blankets.each do |blanket| %>
+  <%= blanket.name %>
+  <br>
+  <%= link_to "View Blanket", blanket_path(blanket) %>
+  <hr>
+<% end %>
