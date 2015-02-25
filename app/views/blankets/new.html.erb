@@ -1,0 +1,19 @@
+<h1>Time to make a new blanket record...</h1>
+
+<%= form_for @blanket do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+  <br>
+  <%= f.label :fabric %>
+  <%= f.text_field :fabric %>
+  <br>
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+  <br>
+  <%= f.submit %>
+
+<% end %>

@@ -8,6 +8,19 @@ class BlanketsController < ApplicationController
     @blanket = Blanket.find(params[:id])
   end
 
+  def new
+    @blanket = Blanket.new
+  end
+
+  def create
+    @blanket = Blanket.new
+    if @blanket.save(blanket_params)
+      flash[:notice] = "Blanket was successfully created"
+      redirect_to blankets_path
+    else
+      render :new
+    end
+  end
 
 
   private
